@@ -1,0 +1,10 @@
+EXPORT("11000","export exception" ),    //导出异常
+NOT_FOUND("11001","not found the data"),//数据不存在
+EXISTED("11002","Already existed "),//数据已存在
+USER_HAD_EXITS("11003","the user had exits"),//用户已存在
+OLD_PWD_NOT_MATCH("11004","old password not match"),//旧密码不符合
+TENANT_EXISTED_EXCEPTION("11008","TenantExistingException"),
+TENANT_AND_USER_RELATIONSHIP_EXCEPTION("11009","Tenant and User Relationship error"),
+ROLE_HAD_ASSOCIATED_USER("11010","Associated user"),//用户已存在
+ROLE_NOT_EXISTS("11011","ROLE NOT EXISTS"),//用户不存在
+TENANT_NOT_EXISTS("11012","TENANT NOT EXISTS"),//租户不存在
