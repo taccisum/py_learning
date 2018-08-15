@@ -38,9 +38,14 @@ def format(file):
         for t in formatted_text:
             print(t)
 
-    with open('out.txt', 'wt') as f_out:
+    print()
+    print()
+
+    with open('out.txt', 'wt', encoding='utf8') as f_out:
         if f_out.writable():
             for t in formatted_text:
-                f_out.write(t + os.linesep)
+                print(t)
+                f_out.write(t)
+                f_out.write(os.linesep)
         else:
             print('can not write file to out.txt')
