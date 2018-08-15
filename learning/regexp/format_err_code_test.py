@@ -41,7 +41,7 @@ class TestFormatErrCode(unittest.TestCase):
         self.assertIsNone(info)
 
     def test_format(self):
-        format('learning/regexp/ex.txt')
+        format('learning/regexp/ex.txt', ',')
 
 
 if __name__ == '__main__':

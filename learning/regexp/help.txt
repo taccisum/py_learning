@@ -1,0 +1,9 @@
+usage: fec [-s] [-o] [-v] [help] file
+
+options:
+    -o[--out]           output file path, default 'out.txt'
+    -s[--separator]     separator char, default ','
+    -v[--verbose]       verbose output
+
+args:
+    file: file path you want to format
