@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tac.apps.TacConfig',
 ]
 
 MIDDLEWARE = [
@@ -78,9 +79,22 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'tac_db': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'tac_db.sqlite3'),
     }
 }
 
+DATABASE_APPS_MAPPING = {
+    'admin': 'default',
+    'auth': 'default',
+    'contenttypes': 'default',
+    'sessions': 'default',
+    'polls': 'default',
+    'tac': 'tac_db',
+}
+DATABASE_ROUTERS = ['mysite.db_router.DatabaseAppsRouter']
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
